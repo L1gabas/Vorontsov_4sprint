@@ -1,22 +1,20 @@
 package ru.yandex.praktikum.scooter;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import ru.yandex.praktikum.page.MainPage;
 import ru.yandex.praktikum.page.OrderPage;
 import ru.yandex.praktikum.page.RentPage;
+import ru.yandex.praktikum.page.WebDriverFactory;
 
 public class OrderButton {
     private WebDriver driver;
 
     @Before
     public void setup() {
-        //WebDriverManager.chromedriver().clearDriverCache().setup();
-        driver = new ChromeDriver();
+        driver = WebDriverFactory.getWebDriver(System.getProperty("browser", "chrome"));
         driver.get("https://qa-scooter.praktikum-services.ru");
     }
 

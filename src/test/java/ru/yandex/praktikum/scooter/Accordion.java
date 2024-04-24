@@ -6,14 +6,14 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import static org.junit.Assert.assertTrue;
 import ru.yandex.praktikum.page.MainPage;
+import ru.yandex.praktikum.page.WebDriverFactory;
 
 @RunWith(Parameterized.class)
+
 public class Accordion {
 
-    public static final String BROWSER = "chrome";
     private WebDriver driver;
     private int index;
     private String answer;
@@ -38,7 +38,7 @@ public class Accordion {
 
     @Before
     public void setup() {
-        driver = new ChromeDriver();
+        driver = WebDriverFactory.getWebDriver(System.getProperty("browser", "chrome"));
         driver.get("https://qa-scooter.praktikum-services.ru");
     }
     @Test
