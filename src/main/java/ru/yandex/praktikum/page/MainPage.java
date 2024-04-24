@@ -23,7 +23,7 @@ public class MainPage {
     //Локатор ответа
     private final String answerLocator = "//div[contains(@id, 'accordion__panel')][.='%s']";
 
-    //Конструктор
+    //Конструктор.
     public MainPage(WebDriver driver) {
         this.driver = driver;
     }

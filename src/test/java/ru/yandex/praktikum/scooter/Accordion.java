@@ -35,7 +35,7 @@ public class Accordion {
                 {7, "Да, обязательно. Всем самокатов! И Москве, и Московской области."},
         };
     }
-
+//Использование WebDriverFactory
     @Before
     public void setup() {
         driver = WebDriverFactory.getWebDriver(System.getProperty("browser", "chrome"));

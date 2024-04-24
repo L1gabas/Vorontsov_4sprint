@@ -24,7 +24,7 @@ public class OrderPage {
     //Локатор метро из списка
     private final String subwayStationLocator = "//div[text()='%s']";
 
-    //Конструктор
+    //Конструктор.
     public OrderPage(WebDriver driver) {
         this.driver = driver;
     }

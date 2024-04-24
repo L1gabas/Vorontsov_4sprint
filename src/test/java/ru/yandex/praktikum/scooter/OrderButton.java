@@ -11,7 +11,7 @@ import ru.yandex.praktikum.page.WebDriverFactory;
 
 public class OrderButton {
     private WebDriver driver;
-
+    //Использование WebDriverFactory
     @Before
     public void setup() {
         driver = WebDriverFactory.getWebDriver(System.getProperty("browser", "chrome"));

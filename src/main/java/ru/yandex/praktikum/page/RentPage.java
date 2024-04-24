@@ -27,7 +27,7 @@ public class RentPage {
     //Локатор всплывающего окна Заказ оформлен
     private By orderIsProcessedLocator= By.xpath("//button[text()='Посмотреть статус']");
 
-    //Конструктор
+    //Конструктор.
     public RentPage(WebDriver driver) {
         this.driver = driver;
     }
